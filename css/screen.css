@@ -57,11 +57,10 @@ a { color: #25b0ed; }
 
 .videos { overflow: hidden; font-size: 0; }
 
-.video { width: 300px; display: inline-block; margin: 0 0 18px 18px; font-size: 13px; }
+.video { width: 300px; display: inline-block; margin: 0 0 18px 18px; font-size: 13px; text-decoration: none; }
 .video .video__img { display: block; }
 .video:first-child, .video.video_first { margin-left: 0; }
 .video .video__meta { background: black; padding: 5px; overflow: hidden; position: relative; }
-.video .video__meta .video__user { text-decoration: none; }
 .video .video__meta .video__user * { vertical-align: middle; }
 .video .video__meta .video__user img { margin-right: 7px; }
 .video .video__started { position: absolute; right: 0; top: 0; line-height: 40px; height: 40px; right: 12px; font-size: 13px; color: #999999; padding-right: 28px; }
