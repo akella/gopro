@@ -1,9 +1,18 @@
 // Normally mainpage styles
+$blue: #25b0ed
 body
+	font-size: 13px 
+	line-height: 1.4
 	background: #252525
-.out
+	+normal
+a
+	color: $blue
+.l-container
+	position: relative
 	width: 940px 
 	margin: 0 auto
+.out
+	position: relative
 .footer__in
 	@extend .out
 
@@ -17,35 +26,35 @@ body
 		top: 16px 
 		text-indent: -1983em
 		overflow: hidden 
-	.header__onair
-		position: absolute
-		left: 50%
-		margin-left: -28px    
-		top: 0
-		font-size: 18px  
-		text-transform: uppercase
-		padding-top: 15px 
-		color: #fff   
-		line-height: 1 
-		font-weight: 100 
-		&:before
-			content: ' '
-			position: absolute
-			top: 0
-			height: 4px  
-			width: 100% 
-			background: #3AB2E9
-			+box-shadow(0 0 10px rgba(37,176,237,.75))
-	.header__archived
-		position: absolute
-		right: 0
-		top: 18px  
-		font-size: 18px 
-		line-height: 1 
-		font-weight: 100 
-		text-decoration: none
-		color: #3AB2E9
-		text-transform: uppercase 
+.nav
+	=clr
+	float: right
+	width: 520px
+.nav__item
+	position: relative
+	float: right
+	&:first-child
+		float: left
+	&.is-active
+		.nav__link
+			color: #fff 
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				height: 4px  
+				width: 100% 
+				background: #3AB2E9
+				+box-shadow(0 0 10px rgba(37,176,237,.75))
+.nav__link
+	display: block
+	padding-top: 18px
+	font-size: 18px 
+	line-height: 1 
+	font-weight: 100 
+	text-decoration: none
+	color: #3AB2E9
+	text-transform: uppercase 
 		
 .mainvideo
 	border-bottom: 1px solid #464646 
@@ -105,6 +114,9 @@ body
 	color: #fff 
 	text-transform: uppercase
 	margin-bottom: 16px 
+	span
+		color: $blue 
+
 .videos
 	overflow: hidden
 	font-size: 0 
@@ -112,7 +124,7 @@ body
 .video
 	width: 300px 
 	display: inline-block
-	margin-left: 18px 
+	margin: 0 0 18px 18px 
 	font-size: 13px 
 	.video__img
 		display: block 
@@ -151,7 +163,7 @@ body
 
 .footer
 	background: #000000 
-	margin-top: 189px 
+	margin-top: 171px 
 	border-top: 1px solid #383838 
 	color: #fff 
 	.footer__in
@@ -212,7 +224,48 @@ body
 		border: none
 		font-weight: 100  
 		margin-top: 10px 
+		
+.title
+	+clr
+	.h2
+		float: left
+	.title__right
+		float: right
 
+.search-input
+	width: 380px
+.input
+	display: block
+	padding: 0 6px 
+	width: 100%
+	height: 24px
+	background: #555 
+	+box-sizing(border-box)
+	border-radius: 2px
+	font-size: 13px
+	+normal
+	+placeholder
+		color: #252525
 
-
-
+.overlay
+	position: absolute
+	top: 0
+	bottom: -115px
+	right: 0
+	left: 0
+	z-index: 1000
+	background: rgba(0,0,0,.8) 
+.popup
+	position: absolute
+	left: 50%
+	top: 115px
+	margin-left: -470px
+	width: 940px
+	z-index: 2000
+.popup__close
+	position: absolute
+	top: 1px
+	right: -38px
+	+s(close)
+	&:active
+		margin-top: 1px
